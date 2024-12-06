@@ -1,0 +1,90 @@
+@import "../../styles/colors.scss";
+
+.header {
+  background-color: $white;
+  height: 70px;
+
+  & .container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    padding: 0 50px 0 50px;
+    width: 100%;
+    align-items: center;
+    gap: 40px;
+    justify-content: center;
+
+    & .leftSection {
+      display: flex;
+      gap: 25px;
+      & > p {
+        font-family: "Neue Haas Display";
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19.2px;
+        text-align: left;
+        text-underline-position: from-font;
+        text-decoration-skip-ink: none;
+        color: $endeavour;
+      }
+    }
+
+    & .rightSection {
+      display: flex;
+      gap: 15px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: auto;
+    padding: 0 20px;
+
+    & .container {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 20px;
+
+      & .leftSection {
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        & > p {
+          font-size: 14px;
+          line-height: 18px;
+        }
+      }
+
+      & .rightSection {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        width: 100%;
+        gap: 10px;
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    & .container {
+      flex-direction: column;
+      padding: 0 10px;
+
+      & .leftSection {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+
+        & > p {
+          font-size: 12px;
+          line-height: 16px;
+        }
+      }
+
+      & .rightSection {
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+      }
+    }
+  }
+}
