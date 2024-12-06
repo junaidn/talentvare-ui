@@ -1,0 +1,26 @@
+@import "../../styles/colors.scss";
+@import "../../styles/mixins.scss";
+
+.inputContainer {
+  display: flex;
+  height: 39px;
+  min-width: 261px;
+  background-color: $zircon;
+  align-items: center;
+  gap: 10px;
+  border-radius: 8px;
+
+  & > p {
+    margin-left: 20px;
+    cursor: pointer;
+  }
+
+  & input {
+    @include placeholder($waterloo);
+    border: 0;
+    background-color: transparent;
+    outline: none;
+    width: 100%;
+    margin: 0 10px 0 10px;
+  }
+}
