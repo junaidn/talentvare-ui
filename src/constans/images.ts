@@ -1,0 +1,1 @@
+export const appLogo = "/images/logo.png"
