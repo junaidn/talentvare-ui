@@ -5,6 +5,7 @@ import { SearchIcon } from "../svg-icons";
 import { Avatar } from "../avatar/Avatar";
 import { profile } from "@/constans/images";
 import { LinkButton } from "../link-button/LinkButton";
+import { Button } from "../button/Button";
 
 export const SideMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -37,6 +38,7 @@ export const SideMenu = () => {
         <LinkButton href="#" label="Documents" />
         <LinkButton href="#" label="Messages" />
         <LinkButton href="#" label="Notification" />
+        <Button label="Resume Builder" onClick={() => {}} />
       </nav>
     </Fragment>
   );
