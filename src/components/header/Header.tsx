@@ -9,10 +9,12 @@ import { Input } from "../input/Input";
 import { SearchIcon } from "../svg-icons";
 import { Button } from "../button/Button";
 import { Avatar } from "../avatar/Avatar";
+import { SideMenu } from "../side-menu/SideMenu";
 
 export const Header = () => {
   return (
     <header className={styles.header}>
+      <SideMenu />
       <div className={styles.container}>
         <Image src={appLogo} height={41} width={39} alt="app-logo" />
         <div className={styles.leftSection}>
