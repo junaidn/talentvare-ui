@@ -1,0 +1,105 @@
+@import "../../styles/colors.scss";
+
+.jobCard {
+  display: flex;
+  flex-direction: column;
+  height: 164px;
+  max-width: 182px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+  border: 1px solid $white;
+  background-color: $white;
+
+  & .details {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    & .heading {
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 12px;
+      color: $mineShaft;
+    }
+
+    & .title {
+      display: flex;
+      gap: 10px;
+      height: 40px;
+      justify-content: space-between;
+      align-items: center;
+
+      & div:first-of-type {
+        width: 40px;
+        border: 0.76px solid $white;
+        background-color: $alabaster;
+        padding: 6px 8px 6px 8px;
+        border-radius: 10px;
+
+        & img {
+          object-fit: cover;
+        }
+      }
+
+      & div:last-of-type {
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        color: $mineShaft;
+        font-weight: 400;
+
+        & p:first-of-type {
+          font-size: 12px;
+          line-height: 16.8px;
+        }
+
+        & p:last-of-type {
+          font-size: 12px;
+          line-height: 14.4px;
+        }
+      }
+    }
+
+    & .location {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      & div {
+        display: flex;
+        gap: 10px;
+        color: $comet;
+
+        & p,
+        span {
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 14.4px;
+        }
+
+        & span {
+          color: $endeavour;
+        }
+      }
+    }
+
+    & .buttons {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+
+      & button {
+        height: 34px;
+        & p {
+          font-size: 12px;
+          font-weight: 500;
+          line-height: 14.4px;
+        }
+      }
+
+      & img {
+        cursor: pointer;
+      }
+    }
+  }
+}

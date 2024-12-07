@@ -3,7 +3,7 @@
 
 .dropdown {
   position: relative;
-  height: 37px;
+  height: 100%;
   width: 100%;
   border: 0;
 
@@ -21,10 +21,9 @@
 
   & .dropdownList {
     position: absolute;
-    top: calc(60% + 1px);
+    top: calc(100% + 1px);
     left: 0;
     width: 100%;
-    border: 1px solid $comet;
     border-radius: 4px;
     background-color: $white;
     z-index: 10;

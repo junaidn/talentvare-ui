@@ -5,8 +5,10 @@ import styles from "./dropdown.module.scss";
 import Image from "next/image";
 import { arrowDown } from "@/constans/images";
 
+export type DropdownOptions = { value: string; label: string }[];
+
 interface IProps {
-  options: { value: string; label: string }[];
+  options: DropdownOptions;
   placeholder: string;
 }
 
@@ -23,7 +25,10 @@ export const Dropdown: React.FC<IProps> = ({ options, placeholder }) => {
   return (
     <div className={styles.dropdown}>
       <div className={styles.dropdownHeader} onClick={toggleDropdown}>
-        <span>{selected || placeholder}</span>
+        <span>
+          {options.find((option) => option.value === selected)?.label ||
+            placeholder}
+        </span>
         <Image src={arrowDown} height={5} width={10} alt="arrow-down" />
       </div>
       {isOpen && (
