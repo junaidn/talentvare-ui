@@ -18,13 +18,9 @@
       display: flex;
       gap: 25px;
       & > p {
-        font-family: "Neue Haas Display";
         font-size: 16px;
         font-weight: 500;
         line-height: 19.2px;
-        text-align: left;
-        text-underline-position: from-font;
-        text-decoration-skip-ink: none;
         color: $endeavour;
         cursor: pointer;
       }

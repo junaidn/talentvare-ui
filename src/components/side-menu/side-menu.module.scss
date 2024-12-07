@@ -5,7 +5,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 20px;
+  padding: 10px 0;
 
   & .searchSection {
     display: flex;
@@ -33,7 +33,6 @@
   }
 
   & > p {
-    font-family: "Neue Haas Display";
     font-size: 16px;
     font-weight: 500;
     line-height: 19.2px;

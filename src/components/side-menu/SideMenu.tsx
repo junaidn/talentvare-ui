@@ -23,7 +23,7 @@ export const SideMenu = () => {
         </div>
         <div className={styles.searchSection}>
           <Input placeholder="Search" icon={<SearchIcon fill="#737A91" />} />
-          <Avatar imageUrl={profile} />
+          <Avatar src={profile} height={38} width={38} alt="me-profile" />
         </div>
       </div>
 

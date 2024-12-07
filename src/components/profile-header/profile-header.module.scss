@@ -1,0 +1,70 @@
+@import "../../styles/colors.scss";
+
+.profileHeader {
+  display: flex;
+  flex-direction: column;
+  height: 248px;
+  width: 346px;
+  background-color: $white;
+  border-radius: 10px;
+
+  & .coverPhoto {
+    height: 40%;
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    & > img {
+      position: absolute;
+      bottom: -45px;
+      left: 50%;
+      transform: translateX(-50%);
+      gap: 0px;
+      opacity: 0px;
+      object-fit: cover;
+    }
+  }
+
+  & .profileInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+    padding-top: 52px;
+    text-align: center;
+    & .name {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 21.6px;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+      color: $mineShaft;
+    }
+
+    & .skils {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      height: 34px;
+      text-overflow: ellipsis;
+      -webkit-line-clamp: 2;
+      max-width: 236px;
+      height: calc(1.5em * 1.7);
+      font-size: 14px;
+      font-weight: 400;
+    }
+
+    & .location {
+      font-size: 12px;
+      font-weight: 400;
+      line-height: 14.4px;
+      text-align: center;
+      text-underline-position: from-font;
+      text-decoration-skip-ink: none;
+    }
+  }
+}

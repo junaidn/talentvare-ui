@@ -29,7 +29,7 @@ export const Header = () => {
         <div className={styles.rightSection}>
           <Input placeholder="Search" icon={<SearchIcon fill="#737A91" />} />
           <Button label="Resume Builder" onClick={() => {}} />
-          <Avatar imageUrl={profile} />
+          <Avatar src={profile} height={38} width={38} alt="me-profile" />
         </div>
       </div>
     </header>
