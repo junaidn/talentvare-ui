@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./job-card.module.scss";
 import Image from "next/image";
-import { clock, location, save, teams } from "@/constans/images";
+import { clock, location, save } from "@/constans/images";
 import { Button } from "../button/Button";
 
 export interface JobPosting {

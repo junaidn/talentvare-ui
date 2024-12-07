@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import styles from "./collapsible.module.scss";
-import { arrowDown, teams } from "@/constans/images";
+import { arrowDown } from "@/constans/images";
 import Image from "next/image";
-import { JobPosting } from "../job-card/JobCard";
 
 interface IProps {
   heading: string;
