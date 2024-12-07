@@ -19,6 +19,7 @@ import {
   jobTypes,
   jobPostings,
 } from "@/constans/dummy-data";
+import LOCALES from "@/constans/locales";
 
 const Home = () => {
   return (
@@ -42,25 +43,31 @@ const Home = () => {
       <div className={styles.rightSection}>
         <div className={styles.titleSection}>
           <p>
-            Find your Dream Job, <span>Albert!</span>
+            {LOCALES.HOME.HEADING} <span>Albert!</span>
           </p>
-          <p>
-            Explore the latest job openings and apply for the best opportunities
-            available today!
-          </p>
+          <p>{LOCALES.HOME.DESCRIPTION}</p>
         </div>
         <div className={styles.filterSection}>
           <div className={styles.searchInput}>
-            <input placeholder="Job Title, Company, or Keywords" />
+            <input placeholder={LOCALES.GENERIC.FILTER_INPUT_PLACEHOLDER} />
           </div>
           <div className={styles.locationDropdown}>
-            <Dropdown options={locations} placeholder="Select Location" />
+            <Dropdown
+              options={locations}
+              placeholder={LOCALES.GENERIC.SELECT_LOCATION}
+            />
           </div>
           <div className={styles.jobTypeDropdown}>
-            <Dropdown options={jobTypes} placeholder="Job Type" />
+            <Dropdown
+              options={jobTypes}
+              placeholder={LOCALES.GENERIC.JOB_TYPE}
+            />
           </div>
           <div className={styles.searchButton}>
-            <Button label="Search" icon={<SearchIcon fill="#ffffff" />} />
+            <Button
+              label={LOCALES.GENERIC.SEARCH}
+              icon={<SearchIcon fill="#ffffff" />}
+            />
           </div>
         </div>
         <div className={styles.similarJobTypesSecton}>
@@ -72,8 +79,8 @@ const Home = () => {
         <div className={styles.featuredJobsSection}>
           <Divider />
           <div className={styles.featuredJobsTitle}>
-            <p>Featured Jobs</p>
-            <p>See Featured Jobs</p>
+            <p>{LOCALES.HOME.FEATURED_JOB}</p>
+            <p>{LOCALES.HOME.SEE_FEATURES_JOBS}</p>
           </div>
           <div className={styles.featuredJobsList}>
             {jobPostings.featured.map((featured, i) => (
@@ -82,8 +89,8 @@ const Home = () => {
           </div>
           <Divider />
           <div className={styles.featuredJobsTitle}>
-            <p>Recommended Jobs</p>
-            <p>See Recommended Jobs</p>
+            <p>{LOCALES.HOME.RECOMMENDED_JOBS}</p>
+            <p>{LOCALES.HOME.SEE_RECOMMENDED_JOBS}</p>
           </div>
           <div className={styles.featuredJobsList}>
             {jobPostings.recommended.map((recommended, i) => (
@@ -92,8 +99,8 @@ const Home = () => {
           </div>
           <Divider />
           <div className={styles.featuredJobsTitle}>
-            <p>Latest Jobs</p>
-            <p>See Latest Jobs</p>
+            <p>{LOCALES.HOME.LATEST_JOBS}</p>
+            <p>{LOCALES.HOME.SEE_LATEST_JOBS}</p>
           </div>
           <div className={styles.featuredJobsList}>
             {jobPostings.latest.map((latest, i) => (

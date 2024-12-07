@@ -3,6 +3,7 @@ import styles from "./job-card.module.scss";
 import Image from "next/image";
 import { clock, location, save } from "@/constans/images";
 import { Button } from "../button/Button";
+import LOCALES from "@/constans/locales";
 
 export interface JobPosting {
   companyImage: string;
@@ -24,7 +25,7 @@ export const JobCard: React.FC<JobPosting> = ({
   return (
     <div className={styles.jobCard}>
       <div className={styles.details}>
-        <p className={styles.heading}>Promoted</p>
+        <p className={styles.heading}>{LOCALES.HOME.PROMOTED}</p>
         <div className={styles.title}>
           <div>
             <Image
@@ -52,7 +53,7 @@ export const JobCard: React.FC<JobPosting> = ({
           </div>
         </div>
         <div className={styles.buttons}>
-          <Button label="Apply Now" />
+          <Button label={LOCALES.GENERIC.APPLY_NOW} />
           <Image src={save} height={16} width={12} alt="save" />
         </div>
       </div>

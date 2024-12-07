@@ -10,6 +10,7 @@ import { SearchIcon } from "../svg-icons";
 import { Button } from "../button/Button";
 import { Avatar } from "../avatar/Avatar";
 import { SideMenu } from "../side-menu/SideMenu";
+import LOCALES from "@/constans/locales";
 
 export const Header = () => {
   return (
@@ -18,17 +19,20 @@ export const Header = () => {
       <div className={styles.container}>
         <Image src={appLogo} height={41} width={39} alt="app-logo" />
         <div className={styles.leftSection}>
-          <p>Find Jobs</p>
-          <LinkButton href="#" label="Top Companies" />
-          <LinkButton href="#" label="Job Tracker" />
-          <LinkButton href="#" label="My Calendar" />
-          <LinkButton href="#" label="Documents" />
-          <LinkButton href="#" label="Messages" />
-          <LinkButton href="#" label="Notification" />
+          <p>{LOCALES.HEADER.FIND_JOBS}</p>
+          <LinkButton href="#" label={LOCALES.HEADER.TOP_COMPANIES} />
+          <LinkButton href="#" label={LOCALES.HEADER.JOB_TRACKER} />
+          <LinkButton href="#" label={LOCALES.HEADER.MY_CALENDAR} />
+          <LinkButton href="#" label={LOCALES.HEADER.DOCUMENTS} />
+          <LinkButton href="#" label={LOCALES.HEADER.MESSAGES} />
+          <LinkButton href="#" label={LOCALES.HEADER.NOTIFICATION} />
         </div>
         <div className={styles.rightSection}>
-          <Input placeholder="Search" icon={<SearchIcon fill="#737A91" />} />
-          <Button label="Resume Builder" onClick={() => {}} />
+          <Input
+            placeholder={LOCALES.GENERIC.SEARCH}
+            icon={<SearchIcon fill="#737A91" />}
+          />
+          <Button label={LOCALES.GENERIC.RESUME_BUILDER} onClick={() => {}} />
           <Avatar src={profile} height={38} width={38} alt="me-profile" />
         </div>
       </div>
