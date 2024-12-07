@@ -28,8 +28,6 @@ export const Collapsible: React.FC<IProps> = ({
     >
       <div className={styles.header}>
         <div className={styles.heading}>
-          {/* <p>My calendar</p>
-          <p>Upcoming Interviews</p> */}
           <p>{heading}</p>
           <p>{subHeading}</p>
         </div>
