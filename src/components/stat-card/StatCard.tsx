@@ -1,24 +1,32 @@
 import React from "react";
 import styles from "./stat-card.module.scss";
 
-interface IProps {}
+interface IProps {
+  profileVisitors: number;
+  resumeViewers: number;
+  myJobs: number;
+}
 
-export const StatCard: React.FC<IProps> = () => {
+export const StatCard: React.FC<IProps> = ({
+  profileVisitors,
+  resumeViewers,
+  myJobs,
+}) => {
   return (
     <div className={styles.statCard}>
       <div>
         <p>Profile Visitors</p>
-        <p>140</p>
+        <p>{profileVisitors}</p>
       </div>
       <hr />
       <div>
         <p>Resume Viewers</p>
-        <p>20</p>
+        <p>{resumeViewers}</p>
       </div>
       <hr />
       <div>
         <p>My Jobs</p>
-        <p>88</p>
+        <p>{myJobs}</p>
       </div>
     </div>
   );
