@@ -1,0 +1,118 @@
+@import "../../styles/colors.scss";
+
+.collapsible {
+  display: flex;
+  flex-direction: column;
+  height: 56px;
+  padding: 10px;
+  gap: 10px;
+  border-radius: 10px;
+  border: 1px solid $white;
+  background-color: $white;
+  overflow: scroll;
+
+  & .header {
+    display: flex;
+    justify-content: space-between;
+
+    & .heading {
+      display: flex;
+      flex-direction: column;
+
+      & p:first-of-type {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 19.2px;
+        color: $mineShaft;
+      }
+
+      & p:last-of-type {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.8px;
+        color: $waterloo;
+      }
+    }
+
+    & img {
+      margin-right: 11px;
+      cursor: pointer;
+    }
+  }
+
+  & .section {
+    height: 70px;
+    display: flex;
+    gap: 10px;
+    background-color: $alabaster;
+    border-radius: 10px;
+    align-items: center;
+    padding: 0 10px;
+
+    & .image {
+      width: 10%;
+      display: flex;
+      gap: 10px;
+      & div:first-of-type {
+        width: 40px;
+        border: 0.76px solid $white;
+        background-color: $zircon;
+        padding: 6px 8px 6px 8px;
+        border-radius: 10px;
+
+        & img {
+          object-fit: cover;
+        }
+      }
+    }
+
+    & .details {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+
+      & .title {
+        color: $mineShaft;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16.8px;
+      }
+
+      & .schedule {
+        color: $waterloo;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16.8px;
+      }
+    }
+
+    & .buttons {
+      width: 40%;
+      display: flex;
+      gap: 6px;
+
+      & button {
+        display: flex;
+        align-items: center;
+        border: 0;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 16.8px;
+        height: 25px;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      & button:first-of-type {
+        background-color: $aquamarine;
+        color: $mountainMeadow;
+      }
+
+      & button:last-of-type {
+        background-color: $zircon;
+        color: $comet;
+      }
+    }
+  }
+}
