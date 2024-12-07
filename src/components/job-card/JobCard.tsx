@@ -4,29 +4,50 @@ import Image from "next/image";
 import { clock, location, save, teams } from "@/constans/images";
 import { Button } from "../button/Button";
 
-export const JobCard = () => {
+export interface JobPosting {
+  companyImage: string;
+  jobTitle: string;
+  companyName: string;
+  jobLocation: string;
+  postingTime: string;
+  noOfApplicants: number;
+}
+
+export const JobCard: React.FC<JobPosting> = ({
+  companyImage,
+  jobTitle,
+  companyName,
+  jobLocation,
+  postingTime,
+  noOfApplicants,
+}) => {
   return (
     <div className={styles.jobCard}>
       <div className={styles.details}>
         <p className={styles.heading}>Promoted</p>
         <div className={styles.title}>
           <div>
-            <Image src={teams} height={21} width={23} alt="company-pic" />
+            <Image
+              src={companyImage}
+              height={21}
+              width={23}
+              alt="company-pic"
+            />
           </div>
           <div>
-            <p>UI/UX Designer</p>
-            <p>Teams</p>
+            <p>{jobTitle}</p>
+            <p>{companyName}</p>
           </div>
         </div>
         <div className={styles.location}>
           <div>
             <Image src={location} height={12} width={10} alt="location" />
-            <p>Seattle, USA (Remote)</p>
+            <p>{jobLocation}</p>
           </div>
           <div>
             <Image src={clock} height={12} width={10} alt="clock" />
             <p>
-              1 day ago | <span>22 applicants</span>
+              {postingTime} | <span>{noOfApplicants} applicants</span>
             </p>
           </div>
         </div>
