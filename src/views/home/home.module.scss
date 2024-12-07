@@ -1,179 +1,166 @@
 @import "../../styles/colors.scss";
 @import "../../styles/mixins.scss";
 
-.layout {
+.leftSection {
   display: flex;
-  justify-content: center;
-  gap: 24px;
-  padding: 25px 40px;
-  max-width: 1443px;
+  flex-direction: column;
+  gap: 10px;
+  width: 346px;
+}
 
-  & .leftSection {
+.rightSection {
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 21px;
+  width: 974px;
+
+  & .titleSection {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 346px;
-  }
+    gap: 5px;
 
-  & .rightSection {
-    margin-top: 15px;
-    display: flex;
-    flex-direction: column;
-    gap: 21px;
-    width: 974px;
+    & p:first-of-type {
+      font-size: 22px;
+      font-weight: 500;
+      line-height: 26.4px;
+      color: $mineShaft;
 
-    & .titleSection {
-      display: flex;
-      flex-direction: column;
-      gap: 5px;
-
-      & p:first-of-type {
+      & span {
         font-size: 22px;
         font-weight: 500;
         line-height: 26.4px;
-        color: $mineShaft;
+        color: $endeavour;
+      }
+    }
 
-        & span {
-          font-size: 22px;
-          font-weight: 500;
-          line-height: 26.4px;
-          color: $endeavour;
-        }
+    & p:last-of-type {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.8px;
+      color: $comet;
+    }
+  }
+
+  & .filterSection {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    height: 77px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid $white;
+    background-color: $white;
+
+    & .searchInput {
+      width: 60%;
+      & input {
+        @include placeholder($comet);
+        border: 0;
+        outline: none;
+        width: 100%;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 16.8px;
+      }
+      border-right: 1px solid $athensGray;
+    }
+
+    & .locationDropdown {
+      border-right: 1px solid $athensGray;
+      padding-right: 10px;
+    }
+
+    & .locationDropdown,
+    .jobTypeDropdown,
+    .searchButton {
+      width: 13.33%;
+    }
+    @media (max-width: 1200px) {
+      height: 100%;
+      flex-wrap: wrap;
+      .searchButton {
+        width: 100%;
+      }
+      .locationDropdown,
+      .jobTypeDropdown {
+        width: 18%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      flex-direction: column;
+      align-items: flex-start;
+      .searchButton,
+      .locationDropdown,
+      .jobTypeDropdown {
+        width: 100%;
+      }
+
+      .locationDropdown {
+        padding: 0;
+        border: 0;
+      }
+    }
+  }
+
+  & .similarJobTypesSecton {
+    display: flex;
+    gap: 15px;
+    height: 30px;
+    align-items: center;
+  }
+
+  & .featuredJobsSection {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    & hr {
+      margin: 10px 0;
+    }
+
+    & hr:first-of-type {
+      margin-top: 0;
+    }
+
+    & .featuredJobsTitle {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+
+      & p:first-of-type {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 21.6px;
+        color: $mineShaft;
       }
 
       & p:last-of-type {
         font-size: 14px;
         font-weight: 400;
         line-height: 16.8px;
-        color: $comet;
+        text-decoration-line: underline;
+        text-decoration-style: solid;
+        color: $endeavour;
+        cursor: pointer;
       }
     }
 
-    & .filterSection {
+    & .featuredJobsList {
       display: flex;
-      gap: 10px;
-      align-items: center;
-      height: 77px;
-      padding: 20px;
-      border-radius: 10px;
-      border: 1px solid $white;
-      background-color: $white;
-
-      & .searchInput {
-        width: 60%;
-        & input {
-          @include placeholder($comet);
-          border: 0;
-          outline: none;
-          width: 100%;
-          font-size: 14px;
-          font-weight: 500;
-          line-height: 16.8px;
-        }
-        border-right: 1px solid $athensGray;
-      }
-
-      & .locationDropdown {
-        border-right: 1px solid $athensGray;
-        padding-right: 10px;
-      }
-
-      & .locationDropdown,
-      .jobTypeDropdown,
-      .searchButton {
-        width: 13.33%;
-      }
-      @media (max-width: 1200px) {
-        height: 100%;
-        flex-wrap: wrap;
-        .searchButton {
-          width: 100%;
-        }
-        .locationDropdown,
-        .jobTypeDropdown {
-          width: 18%;
-        }
-      }
-
-      @media (max-width: 768px) {
-        flex-direction: column;
-        align-items: flex-start;
-        .searchButton,
-        .locationDropdown,
-        .jobTypeDropdown {
-          width: 100%;
-        }
-
-        .locationDropdown {
-          padding: 0;
-          border: 0;
-        }
-      }
-    }
-
-    & .similarJobTypesSecton {
-      display: flex;
-      gap: 15px;
-      height: 30px;
-      align-items: center;
-    }
-
-    & .featuredJobsSection {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-
-      & hr {
-        margin: 10px 0;
-      }
-
-      & hr:first-of-type {
-        margin-top: 0;
-      }
-
-      & .featuredJobsTitle {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-
-        & p:first-of-type {
-          font-size: 18px;
-          font-weight: 400;
-          line-height: 21.6px;
-          color: $mineShaft;
-        }
-
-        & p:last-of-type {
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 16.8px;
-          text-decoration-line: underline;
-          text-decoration-style: solid;
-          color: $endeavour;
-          cursor: pointer;
-        }
-      }
-
-      & .featuredJobsList {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        @media (max-width: 459px) {
-          justify-content: center;
-        }
+      flex-wrap: wrap;
+      gap: 16px;
+      @media (max-width: 459px) {
+        justify-content: center;
       }
     }
   }
+}
 
-  @media (min-width: 1443px) {
-    max-width: 100%;
-  }
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    .leftSection,
-    .rightSection {
-      width: 100%;
-    }
+@media (max-width: 768px) {
+  .leftSection,
+  .rightSection {
+    width: 100%;
   }
 }

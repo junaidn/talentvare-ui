@@ -1,0 +1,15 @@
+.appLayout {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  padding: 25px 40px;
+  max-width: 1443px;
+
+  @media (min-width: 1443px) {
+    max-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+  }
+}
