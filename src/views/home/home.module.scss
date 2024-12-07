@@ -83,6 +83,32 @@
       .searchButton {
         width: 13.33%;
       }
+      @media (max-width: 1200px) {
+        height: 100%;
+        flex-wrap: wrap;
+        .searchButton {
+          width: 100%;
+        }
+        .locationDropdown,
+        .jobTypeDropdown {
+          width: 18%;
+        }
+      }
+
+      @media (max-width: 768px) {
+        flex-direction: column;
+        align-items: flex-start;
+        .searchButton,
+        .locationDropdown,
+        .jobTypeDropdown {
+          width: 100%;
+        }
+
+        .locationDropdown {
+          padding: 0;
+          border: 0;
+        }
+      }
     }
 
     & .similarJobTypesSecton {
@@ -132,11 +158,22 @@
         display: flex;
         flex-wrap: wrap;
         gap: 16px;
+        @media (max-width: 459px) {
+          justify-content: center;
+        }
       }
     }
   }
 
   @media (min-width: 1443px) {
     max-width: 100%;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    .leftSection,
+    .rightSection {
+      width: 100%;
+    }
   }
 }

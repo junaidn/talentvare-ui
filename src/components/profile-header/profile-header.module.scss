@@ -3,7 +3,7 @@
 .profileHeader {
   display: flex;
   flex-direction: column;
-  min-height: 248px;
+  height: 248px;
   width: 100%;
   background-color: $white;
   border-radius: 10px;
@@ -24,7 +24,6 @@
       left: 50%;
       transform: translateX(-50%);
       gap: 0px;
-      opacity: 0px;
       object-fit: cover;
     }
   }

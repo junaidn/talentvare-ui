@@ -102,4 +102,13 @@
       }
     }
   }
+
+  @media (max-width: 459px) {
+    max-width: unset;
+    width: 100%;
+
+    .buttons {
+      justify-content: space-between;
+    }
+  }
 }
