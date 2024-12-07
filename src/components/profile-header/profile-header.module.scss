@@ -3,10 +3,11 @@
 .profileHeader {
   display: flex;
   flex-direction: column;
-  height: 248px;
-  width: 346px;
+  min-height: 248px;
+  width: 100%;
   background-color: $white;
   border-radius: 10px;
+  border: 1px solid $white;
 
   & .coverPhoto {
     height: 40%;

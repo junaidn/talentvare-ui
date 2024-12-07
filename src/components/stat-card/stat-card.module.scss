@@ -1,0 +1,37 @@
+@import "../../styles/colors.scss";
+
+.statCard {
+  display: flex;
+  flex-direction: column;
+  min-height: 137px;
+  padding: 20px;
+  gap: 15px;
+  border-radius: 10px;
+  border: 1px;
+  border: 1px solid $white;
+  background-color: $white;
+
+  & > div {
+    display: flex;
+    justify-content: space-between;
+
+    & p:first-of-type {
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 16.8px;
+      color: $mineShaft;
+    }
+
+    & p:last-of-type {
+      font-size: 16px;
+      font-weight: 400;
+      line-height: 19.2px;
+      color: $endeavour;
+    }
+  }
+
+  & hr {
+    margin: 0;
+    border: 1px solid $athensGray;
+  }
+}
